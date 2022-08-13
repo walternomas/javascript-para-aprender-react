@@ -1,18 +1,18 @@
-function add(x, y) {
-  return x + y;
-}
+//Inline Arrow Functions
+// const showText = () => {
+//   return 'Hola mundo';
+// };
+const showText = () => 'Hola mundo';
+console.log(showText());
 
-//Arrow Function
-const add = (x, y) => {
-  return x + y;
-};
+const showNumber = () => 22;
+const showBoolean = () => true;
+const showArray = () => [1,2,3];
+console.log(showNumber());
+console.log(showBoolean());
+console.log(showArray());
 
-const button = document.createElement('button');
-button.innerText = 'click me';
+//los paréntesis indican que las llaves no indican el cuerpo de la función.
+const showObject = () => ({name: 'ryan'});
 
-//With arrow functiion
-button.addEventListener('click', () => {
-  alert('clicked');
-});
-
-document.body.append(button);
+console.log(showObject());
