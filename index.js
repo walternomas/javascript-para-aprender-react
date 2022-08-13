@@ -1,16 +1,15 @@
-//return en funciones
+const background = '#303030';
+const color = 'white';
+const isAuthorized = false;
+
+//const result = background + color;
+//string literals
+const result = `${background} ${color}`;
+
 const button = document.createElement('button');
-button.innerText = 'click me';
-
-const isAuthorized = true;
-
-// button.addEventListener('click', () => {
-//   if(isAuthorized) {
-//     alert('está autorizado');
-//   } else {
-//     alert('no está autorizado');
-//   }
-// });
+button.innerText = 'Click me';
+//button.style = 'background: red; color: white';
+button.style = `background: ${isAuthorized ? background : 'red'}; color: ${color};`;
 
 button.addEventListener('click', () => {
   if (isAuthorized) {
