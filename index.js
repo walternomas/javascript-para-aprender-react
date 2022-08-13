@@ -1,17 +1,25 @@
-//Manipulación del DOM
-const title = document.createElement('h1');
-title.innerText = 'hola mundo desde JS';
-console.log(title);
+const user = {
+  name: 'joe',
+  age: 30
+}
 
-const button = document.createElement('button');
-button.innerText = 'click';
+// function printInfo(user) {
+//   return '<h1>Hola ' + user.name + '</h1>';
+// }
 
-//Event handlers
-button.addEventListener('click', function() {
-  console.log('Hola Mundo');
-  title.innerText = 'Texto actualizado con JS';
-  alert('Se realizó un click');
-});
+// function printInfo(user) {
+//   return '<h1>Hola ' + user['name'] + '</h1>';
+// }
 
-document.body.append(title);
-document.body.append(button);
+//Destructuring
+// function printInfo({ name }) {
+//   return '<h1>Hola ' + name + '</h1>';
+// }
+
+function printInfo(user) {
+  const { name, age } = user;
+  return '<h1>Hola ' + name + ', tu edad es ' + age + '</h1>';
+}
+
+console.log(printInfo(user));
+document.body.innerHTML = printInfo(user);
