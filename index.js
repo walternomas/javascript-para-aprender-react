@@ -1,15 +1,10 @@
-//Shorthand property names
-const name = 'laptop';
-const price = 3000;
+//Manipulación del DOM
+const title = document.createElement('h1');
+title.innerText = 'hola mundo desde JS';
+console.log(title);
 
-// const newProduct = {
-//   name: name,
-//   price: price
-// };
+const button = document.createElement('button');
+button.innerText = 'click';
 
-const newProduct = {
-  name,
-  price
-};
-
-console.log(newProduct);
+document.body.append(title);
+document.body.append(button);
