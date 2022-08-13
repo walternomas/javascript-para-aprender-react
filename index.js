@@ -1,25 +1,31 @@
-const user = {
-  name: 'joe',
-  age: 30
-}
+//Funciones anónimas
+//anonymous functions
 
-// function printInfo(user) {
-//   return '<h1>Hola ' + user.name + '</h1>';
+// function start() {
+//   return 'Starting...';
 // }
 
-// function printInfo(user) {
-//   return '<h1>Hola ' + user['name'] + '</h1>';
-// }
+// console.log(function start() {
+//   return 'Starting...';
+// })
 
-//Destructuring
-// function printInfo({ name }) {
-//   return '<h1>Hola ' + name + '</h1>';
-// }
+// console.log(function start() {
+//   return 'Starting...';
+// }())
 
-function printInfo(user) {
-  const { name, age } = user;
-  return '<h1>Hola ' + name + ', tu edad es ' + age + '</h1>';
-}
+console.log(function () {
+  return 'Starting...';
+}())
 
-console.log(printInfo(user));
-document.body.innerHTML = printInfo(user);
+const button = document.createElement('button');
+button.innerText = 'click me';
+
+// button.addEventListener('click', function(){
+//   alert('clicked');
+// });
+
+button.addEventListener('click', function(){
+  alert('clicked');
+});
+
+document.body.append(button);
