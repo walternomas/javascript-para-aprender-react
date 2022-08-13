@@ -1,30 +1,17 @@
-//Funciones anónimas
-//anonymous functions
+function add(x, y) {
+  return x + y;
+}
 
-// function start() {
-//   return 'Starting...';
-// }
-
-// console.log(function start() {
-//   return 'Starting...';
-// })
-
-// console.log(function start() {
-//   return 'Starting...';
-// }())
-
-console.log(function () {
-  return 'Starting...';
-}())
+//Arrow Function
+const add = (x, y) => {
+  return x + y;
+};
 
 const button = document.createElement('button');
 button.innerText = 'click me';
 
-// button.addEventListener('click', function(){
-//   alert('clicked');
-// });
-
-button.addEventListener('click', function(){
+//With arrow functiion
+button.addEventListener('click', () => {
   alert('clicked');
 });
 
