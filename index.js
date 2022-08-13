@@ -1,18 +1,22 @@
-//Inline Arrow Functions
-// const showText = () => {
-//   return 'Hola mundo';
-// };
-const showText = () => 'Hola mundo';
-console.log(showText());
+//return en funciones
+const button = document.createElement('button');
+button.innerText = 'click me';
 
-const showNumber = () => 22;
-const showBoolean = () => true;
-const showArray = () => [1,2,3];
-console.log(showNumber());
-console.log(showBoolean());
-console.log(showArray());
+const isAuthorized = true;
 
-//los paréntesis indican que las llaves no indican el cuerpo de la función.
-const showObject = () => ({name: 'ryan'});
+// button.addEventListener('click', () => {
+//   if(isAuthorized) {
+//     alert('está autorizado');
+//   } else {
+//     alert('no está autorizado');
+//   }
+// });
 
-console.log(showObject());
+button.addEventListener('click', () => {
+  if (isAuthorized) {
+    return alert('está autorizado');
+  }
+  alert('no está autorizado');
+});
+
+document.body.append(button);
