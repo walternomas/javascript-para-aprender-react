@@ -1,24 +1,6 @@
-//spread operator
-const names = ['ryan', 'joe', 'maria'];
-const newNames = ['marcos', 'mario', 'john'];
+//Ecmascript Modules
+import {add, multiply, active, points, title} from './add.js';
 
-console.log([...names, ...newNames]);
-
-const user = {
-  name: 'ryan',
-  lastname: 'ray'
-}
-
-const address = {
-  street: 'main street 123',
-  city: 'buenos aires'
-}
-
-const userInfo = {
-  ...user,
-  ...address
-}
-
-console.log(userInfo);
-console.log(user);
-console.log(address);
+console.log(add(12,22));
+console.log(multiply(12,22));
+console.log(active, points, title);
