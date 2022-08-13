@@ -1,4 +1,10 @@
-//Ecmascript Modules
-import addModule from './add.js';
+const person = {
+  name: 'ryan',
+  address: {
+    city: 'london'
+  }
+};
 
-console.log(addModule());
+console.log(person.address.city);
+//Optional Chaining
+console.log(person.location?.city);
