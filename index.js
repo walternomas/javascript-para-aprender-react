@@ -1,21 +1,32 @@
-const background = '#303030';
-const color = 'white';
-const isAuthorized = false;
+//Array methods
+const names = ['ryan', 'joe', 'maria', 'joe'];
 
-//const result = background + color;
-//string literals
-const result = `${background} ${color}`;
-
-const button = document.createElement('button');
-button.innerText = 'Click me';
-//button.style = 'background: red; color: white';
-button.style = `background: ${isAuthorized ? background : 'red'}; color: ${color};`;
-
-button.addEventListener('click', () => {
-  if (isAuthorized) {
-    return alert('está autorizado');
-  }
-  alert('no está autorizado');
+// for (let i = 0; i < names.length; i++) {
+//   const element = names[i];
+//   console.log(element);
+// }
+names.forEach(name => {
+  console.log(name);
 });
 
-document.body.append(button);
+// const newNames = names.map(function (name) {
+//   return `Hello ${name}`;
+// });
+const newNames = names.map(name => `Hello ${name}`);
+console.log(newNames);
+console.log(names);
+
+const nameFound = names.find(function (name) {
+  if(name === 'joe') {
+    return name;
+  }
+});
+console.log(nameFound);
+
+const nameFilter = names.filter(function (name) {
+  if(name !== 'joe') { //elimino los joes
+    return name;
+  }
+});
+console.log(nameFilter);
+console.log(names);
